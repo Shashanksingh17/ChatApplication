@@ -5,7 +5,7 @@ pipeline {
            steps {
              sh ''' #! /bin/bash 
              
-              aws deploy create-deployment --application-name ChatAppCodeDeploy --deployment-group-name ChatAppCodeDeploy --deployment-config-name CodeDeployDefault.AllAtOnce --github-location repository=Shashanksingh17/ChatApplication,commitId=${GIT_COMMIT}
+              aws deploy create-deployment --application-name chatappjenkins --deployment-group-name ChatappJenkinsDBGroup --deployment-config-name CodeDeployDefault.AllAtOnce --github-location repository=Shashanksingh17/ChatApplication,commitId=${GIT_COMMIT}
              '''
             }
         }
